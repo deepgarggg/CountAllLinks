@@ -1,5 +1,6 @@
 package demo;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -24,10 +25,13 @@ public class TestCases {
     }
 
     
-    public  void testCase01(){
+    public  void testCase01() throws InterruptedException{
+
         System.out.println("Start Test case: testCase01");
-        driver.get("https://www.google.com");
-        System.out.println("end Test case: testCase02");
+        driver.get("https://in.bookmyshow.com/explore/home/chennai");
+        Thread.sleep(2000);
+        System.out.println(driver.findElements(By.xpath("//a")).size());
+        System.out.println("end Test case: testCase01");
     }
 
 
